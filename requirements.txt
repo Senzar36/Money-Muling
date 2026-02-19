@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-pandas
-networkx
-mysql-connector-python
-python-multipart

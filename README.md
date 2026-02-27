@@ -28,4 +28,7 @@ Traditional database queries fail to detect sophisticated multi-hop muling netwo
 5. Access the dashboard at `http://127.0.0.1:8000`
 
 ## Team Members
-- [Your Name / Team Quasar Members]
+- Anirudh Dhamodaran 
+- Jithesh Sankarganesh
+- Chris Johnson
+- Darshan E

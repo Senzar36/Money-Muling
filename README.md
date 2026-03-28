@@ -24,6 +24,14 @@ Instead of analyzing transactions in isolation, this project uses **graph theory
 - **Database:** MySQL
 - **Visualization:** Cytoscape.js
 
+## 📊 Example Insight
+
+Input: Transaction dataset (CSV)  
+Output:
+- Flagged accounts with suspicion scores
+- Identified fraud rings
+- Visualization of transaction graph
+
 ## Suspicion Score Methodology
 - **Circular Routing (90-100%):** Accounts found in a closed directed cycle (length 3-5) are flagged with the highest risk.
 - **High Centrality (70-85%):** Accounts acting as "hubs" (high degree centrality) are flagged for Smurfing/Layering patterns.

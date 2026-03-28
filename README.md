@@ -1,8 +1,22 @@
 # Money Muling Detection Challenge | Team Quasar
 **RIFT 2026 Hackathon - Graph Theory Track**
 
-## Problem Statement
-Traditional database queries fail to detect sophisticated multi-hop muling networks. Team Quasar's engine uses Graph Theory to identify circular fund routing and smurfing hubs in real-time.
+## 🔍 Why this project exists
+Money muling is a key technique used in financial fraud, where illicit funds are transferred through multiple accounts to obscure their origin. Traditional database queries fail to detect these complex, multi-hop transaction patterns.
+
+## 🚀 What this system does
+This system models financial transactions as a **graph** and detects:
+- Circular fund flows (fraud rings)
+- High-centrality accounts (potential hubs)
+- Suspicious transaction patterns
+
+## 🧠 Key Idea
+Instead of analyzing transactions in isolation, this project uses **graph theory** to analyze relationships between accounts.
+
+## ✨ What makes it different
+- Uses **Tarjan’s SCC algorithm** for fraud ring detection
+- Detects **multi-hop laundering patterns**
+- Designed for **large-scale transaction datasets**
 
 ## Tech Stack
 - **Backend:** Python (FastAPI)

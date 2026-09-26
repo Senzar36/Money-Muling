@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+networkx
+pandas
+python-multipart

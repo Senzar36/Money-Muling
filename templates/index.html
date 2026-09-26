@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quasar | Money Muling Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+    <div>
+        <p class="eyebrow">GRAPH FORENSICS</p>
+        <h1>QUASAR</h1>
+    </div>
+    <p class="subtitle">Money Muling Detection</p>
+</header>
+
+<main class="layout">
+    <aside class="sidebar">
+        <section class="panel">
+            <h2>Analyze transactions</h2>
+            <p>Upload a CSV containing sender, receiver, and amount data.</p>
+            <input type="file" id="csvFile" accept=".csv">
+            <button id="analyzeButton">Analyze CSV</button>
+            <p id="status" class="status"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Summary</h2>
+            <div class="stats">
+                <div><span id="nodeCount">—</span><small>Accounts</small></div>
+                <div><span id="edgeCount">—</span><small>Transactions</small></div>
+                <div><span id="ringCount">—</span><small>Fraud rings</small></div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Flagged accounts</h2>
+            <div id="results" class="results">
+                <p class="muted">Run an analysis to see flagged accounts.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Find an account</h2>
+            <div class="search-row">
+                <input type="text" id="searchInput" placeholder="ACC_00123">
+                <button id="searchButton">Search</button>
+            </div>
+            <div id="entityResult" class="entity-result">
+                <p class="muted">Search after uploading a dataset.</p>
+            </div>
+        </section>
+    </aside>
+
+    <section class="graph-panel">
+        <div class="graph-header">
+            <div>
+                <p class="eyebrow">TRANSACTION NETWORK</p>
+                <h2>Account relationship graph</h2>
+            </div>
+            <div class="legend">
+                <span><i class="dot high"></i> High risk</span>
+                <span><i class="dot medium"></i> Medium risk</span>
+                <span><i class="dot normal"></i> Baseline</span>
+            </div>
+        </div>
+        <div id="cy"></div>
+        <div id="tooltip" class="tooltip"></div>
+    </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
